@@ -1,0 +1,28 @@
+{
+  "name": "wget-links",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhkeller/wget-links.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhkeller/wget-links/issues"
+  },
+  "homepage": "https://github.com/mhkeller/wget-links#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "indian-ocean": "^4.0.0",
+    "underscore": "^1.10.2",
+    "wsk-notify": "^1.0.0"
+  }
+}
