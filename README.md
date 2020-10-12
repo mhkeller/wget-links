@@ -1,4 +1,4 @@
-WGET Links
+wget links
 ===
 
 > A very simple script to wget a bunch of links with a delay in between each request. This is not meant to be a comprehensive project with a fully developed API so tweak it as necessary.
