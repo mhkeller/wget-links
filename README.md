@@ -15,7 +15,7 @@ npm install
 
 ## Usage
 
-1. Create a text file with one URL per line and save it in the `in-urls/` folder with a short name like `fun-links.txt`
+1. Create a text file with one URL per line and save it in the `in-urls/` folder with a short name like `fun-links.txt`. See [an example](in-urls/example.txt).
 2. To download every URL in a file, run `node index.js <filename>`. For example, to run it on the `fun-links.txt` file, you would do `node index.js fun-links`.
 
 This will download all of your files to `out/fun-links/`.
