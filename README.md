@@ -20,6 +20,37 @@ npm install
 
 This will download all of your files to `out/fun-links/`.
 
+## Grabbing links
+
+If you have a big list of hyperlinks to PDFs on a page, here's an easy way to grab them and paste them into the right format.
+
+```js
+copy(Array.from(document.querySelectorAll('a.my-css-selector')).map(el => `http://mydomain.com${el.getAttribute('href')}`).join('\n'))
+```
+
+To make this work for a given site, change the CSS selector and the domain to the appropriate values. For example, let's say you have a page structure like this on `https://example.com`:
+
+```html
+<ul id="document list">
+	<li><a href="files/my-document1.pdf">Document 1</a></li>
+	<li><a href="files/my-document2.pdf">Document 2</a></li>
+	<li><a href="files/my-document3.pdf">Document 3</a></li>
+	<li><a href="files/my-document4.pdf">Document 4</a></li>
+</ul>
+```
+
+You would paste this into the console and it would copy all of the absolute URLs:
+
+```js
+copy(Array.from(document.querySelectorAll('#document-list a')).map(el => `https://example.com${el.getAttribute('href')}`).join('\n'))
+```
+
+If the URLs are not relative URLS, then use this version that doesn't prepend a domain.
+
+```js
+copy(Array.from(document.querySelectorAll('#document-list a')).map(el => el.getAttribute('href')).join('\n'))
+```
+
 ## License
 
 MIT
