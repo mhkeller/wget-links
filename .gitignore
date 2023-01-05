@@ -1,2 +1,4 @@
 node_modules/
-out/**/*.pdf
+out/**/*
+in-urls/*.txt
+!in-urls/example.txt

@@ -51,7 +51,7 @@ function download(i) {
 		notify({ m: 'Doing...', v: `${i} of ${urls.length}`, d: ['cyan', 'bold'] });
 		notify({ m: '\tFile...', v: urls[i], d: 'cyan' });
 		try {
-			spawnSync('wget', ['--content-disposition', urls[i], '-P', outDir], { shell: true, stdio: 'inherit' });
+			spawnSync('wget', ['--content-disposition', `"${urls[i]}"`, '-P', outDir], { shell: true, stdio: 'inherit' });
 			// spawnSync('wget', [urls[i], '-O', outPath], { shell: true, stdio: 'inherit' });
 		} catch (err) {
 			notify({ m: 'Error...', v: urls[i], d: 'error' });
