@@ -48,7 +48,7 @@ function download(i) {
 	if (skipList.includes(urls[i])) {
 		notify({ m: 'On skip list, skipping...', d: 'gray' });
 	} else if (!fs.existsSync(outPath)) {
-		notify({ m: 'Doing...', v: `${i} of ${urls.length}`, d: ['cyan', 'bold'] });
+		notify({ m: 'Doing...', v: `${i + 1} of ${urls.length}`, d: ['cyan', 'bold'] });
 		notify({ m: '\tFile...', v: urls[i], d: 'cyan' });
 		try {
 			spawnSync('wget', ['--content-disposition', `"${urls[i]}"`, '-P', outDir], { shell: true, stdio: 'inherit' });
