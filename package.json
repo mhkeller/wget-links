@@ -21,8 +21,8 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "dependencies": {
+    "@mhkeller/notify": "^1.2.0",
     "indian-ocean": "^4.0.0",
-    "underscore": "^1.10.2",
-    "wsk-notify": "^1.0.0"
+    "underscore": "^1.10.2"
   }
 }
