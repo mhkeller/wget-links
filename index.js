@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const notify = require('wsk-notify');
+const notify = require('@mhkeller/notify');
 const { uniq } = require('underscore');
 
 const inFile = process.argv[2];
