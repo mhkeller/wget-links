@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const notify = require('@mhkeller/notify');
-const { uniq } = require('underscore');
 
 const inFile = process.argv[2];
 
@@ -36,7 +35,7 @@ if (!fs.existsSync(inFilePath)) {
 	process.exit(0);
 }
 
-const urls = uniq(fs.readFileSync(inFilePath, 'utf-8').split('\n').filter(Boolean));
+const urls = [...new Set(fs.readFileSync(inFilePath, 'utf-8').split('\n').filter(Boolean))];
 
 function download(i) {
 	let timeout = 0;
