@@ -13,7 +13,7 @@ const defaultSleep = 1000;
 if (!inFile) {
   notify({
     m: 'Error: Argument required. Example:',
-    v: '`npm start -- fop`',
+    v: '`npm start -- foo`',
     d: ['yellow', 'bold'],
   });
   process.exit(0);
